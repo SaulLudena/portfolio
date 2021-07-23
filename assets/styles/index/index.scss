@@ -21,7 +21,27 @@ $aqua:#48FFBD;
     color: $white;
     transition: 0.2s ease-in-out;
 }
-
+@keyframes opacity{
+    0%{
+        opacity: 0%;
+        transform: translateY(-500px);
+    }
+    50%{
+        opacity: 100%;
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes opacity-secondary{
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+    }
+}
 body{
     box-sizing: content-box;
     font-family: 'Raleway', sans-serif;
@@ -63,20 +83,24 @@ body{
                         font-size: 3em;
                         color: $white;
                         font-weight: lighter;
+                        animation: 3s opacity;
                     }
                     .second-text{
                         font-size: 7em;
                         color: $aqua;
+                        animation: 5s opacity-secondary;
                     }
                     .third-text{
                         font-size: 1em;
                         color: $white;
                         font-weight: lighter;
                         padding: 0 0 1em 0 ;
+                        animation: 6s opacity-secondary;
                     }
                     .btnr{
                         display: flex;
                         .btn{
+                            animation: 6s opacity-secondary;
                             display: flex;
                             text-decoration: none;
                             color: $aqua;
@@ -100,6 +124,7 @@ body{
                         .link-item{
                             list-style: none;
                             a{
+                                animation: 3s opacity-secondary;
                                 text-decoration: none;
                                 color: $aqua;
                                 font-size: 3em;

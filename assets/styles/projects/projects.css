@@ -121,8 +121,10 @@ body {
   text-decoration: none;
   color: #48FFBD;
   border: 1px solid #48FFBD;
-  padding: 0.5em 6em;
+  padding: 0.5em 1em;
   border-radius: 5px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .container .main-content .main-info .align-item-center .text .card-container .card .card-info .btnr .btn:hover {
@@ -147,10 +149,6 @@ body {
   font-size: 13em;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
-}
-
-.container .main-content .main-info .align-item-center .text .card-container .card .card-icon i:hover {
-  text-shadow: 0 0 20px #48FFBD;
 }
 
 .container .main-content::-webkit-scrollbar {

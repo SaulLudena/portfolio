@@ -4,6 +4,58 @@
   margin: 0;
 }
 
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+  }
+  50% {
+    opacity: 100%;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+  }
+  50% {
+    opacity: 100%;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes opacity-secondary {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+}
+
+@keyframes opacity-secondary {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+}
+
 body {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -65,11 +117,15 @@ body {
   font-size: 3em;
   color: #E0E0E0;
   font-weight: lighter;
+  -webkit-animation: 3s opacity;
+          animation: 3s opacity;
 }
 
 .container .main-content .main-info .align-item-center .text .second-text {
   font-size: 7em;
   color: #48FFBD;
+  -webkit-animation: 5s opacity-secondary;
+          animation: 5s opacity-secondary;
 }
 
 .container .main-content .main-info .align-item-center .text .third-text {
@@ -77,6 +133,8 @@ body {
   color: #E0E0E0;
   font-weight: lighter;
   padding: 0 0 1em 0;
+  -webkit-animation: 6s opacity-secondary;
+          animation: 6s opacity-secondary;
 }
 
 .container .main-content .main-info .align-item-center .text .btnr {
@@ -86,6 +144,8 @@ body {
 }
 
 .container .main-content .main-info .align-item-center .text .btnr .btn {
+  -webkit-animation: 6s opacity-secondary;
+          animation: 6s opacity-secondary;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,6 +183,8 @@ body {
 }
 
 .container .main-content .main-info .align-item-center .text .links .link-item a {
+  -webkit-animation: 3s opacity-secondary;
+          animation: 3s opacity-secondary;
   text-decoration: none;
   color: #48FFBD;
   font-size: 3em;

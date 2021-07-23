@@ -107,6 +107,7 @@ body{
                                         border: 1px solid $aqua;
                                         padding: 0.5em 1em;
                                         border-radius: 5px;
+                                        transition: 0.2s ease-in-out;
                                     }
                                     .btn:hover{
                                         background-color: $blackmate;    
@@ -122,9 +123,6 @@ body{
                                     color: $aqua;
                                     font-size: 13em;
                                     transition: 0.2s ease-in-out;
-                                }
-                                i:hover{
-                                    text-shadow: 0 0 20px $aqua;
                                 }
                             }
                         }
