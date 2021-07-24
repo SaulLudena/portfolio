@@ -4,11 +4,51 @@
   margin: 0;
 }
 
+@-webkit-keyframes translate_opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  50% {
+    opacity: 80%;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes translate_opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  50% {
+    opacity: 80%;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 body {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   font-family: 'Raleway', sans-serif;
   background: #252525;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
 }
 
 .container {
@@ -50,11 +90,18 @@ body {
   font-size: 2.5em;
 }
 
+.container .main-content .main-info .align-item-center .text {
+  -webkit-animation: 1s translate_opacity;
+          animation: 1s translate_opacity;
+}
+
 .container .main-content .main-info .align-item-center .text .first-text {
   font-size: 3em;
   color: #E0E0E0;
   font-weight: bold;
   padding: 0.2em 0;
+  -webkit-animation: 1s translate_opacity;
+          animation: 1s translate_opacity;
 }
 
 .container .main-content .main-info .align-item-center .text .second-text {
@@ -82,6 +129,7 @@ body {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   gap: 1em;
+  padding: 0 0 2em 0;
 }
 
 .container .main-content .main-info .align-item-center .text .knowledges .list .list-item {
@@ -92,6 +140,8 @@ body {
   font-weight: bold;
   background: #1C1C1C;
   border-radius: 5px;
+  -webkit-animation: 1s translate_opacity;
+          animation: 1s translate_opacity;
 }
 
 .container .main-content .main-info .align-item-center .text .knowledges .list .list-item i {
@@ -126,9 +176,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-animation: 1s opacity;
+          animation: 1s opacity;
 }
 
 .container .navigation-bar .block .btn1 {
+  -webkit-animation: 1s translate_opacity;
+          animation: 1s translate_opacity;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -148,6 +202,8 @@ body {
 }
 
 .container .navigation-bar .block .btn2 {
+  -webkit-animation: 1.5s translate_opacity;
+          animation: 1.5s translate_opacity;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -167,6 +223,8 @@ body {
 }
 
 .container .navigation-bar .block .btn3 {
+  -webkit-animation: 2s translate_opacity;
+          animation: 2s translate_opacity;
   width: 100%;
   height: 100%;
   display: -webkit-box;

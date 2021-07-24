@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
-
 *{
     padding: 0;
     margin: 0;
@@ -21,11 +20,28 @@ $aqua:#48FFBD;
     color: $white;
     transition: 0.2s ease-in-out;
 }
+@keyframes translate_opacity{
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    50%{
+        opacity: 80%;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
 
 body{
     box-sizing: content-box;
     font-family: 'Raleway', sans-serif;
     background: $blackmate;
+}
+body::-webkit-scrollbar{
+    width:0;
 }
 
 .container{
@@ -55,17 +71,27 @@ body{
             }
             .align-item-center{
                 .text{
+                    animation: 1s translate_opacity;
                     .first-text{
+                        animation: 1s translate_opacity;
                         font-size: 3em;
                         color: $white;
                         font-weight: bold;
                         padding: 0.2em 0;
                     }
+                    .second-text{
+                        font-size: 1em;
+                        color: $white;
+                        background:$black ;
+                        font-weight: lighter;
+                        padding: 1em ;
+                    }
                     .my-form{
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         grid-gap: 10px;
-                        padding: 2em 0 5em 0;
+                        padding: 0em 0 5em 0;
+
                         .input-group{
                             gap: 2px;
                             color: $white;
@@ -144,16 +170,19 @@ body{
             height: auto;
             align-items: center;
             justify-content: center;
-            
+            animation: 1s opacity ;
             .btn1{
+                animation: 1s translate_opacity;
                 @include btnStyle();
                 background:$black;
             }
             .btn2{
+                animation: 1.5s translate_opacity;
                 @include btnStyle();
                 background:$blackSoft;
             }
             .btn3{
+                animation: 2s translate_opacity;
                 @include btnStyle();
                 background:$blackVerySoft;
             }

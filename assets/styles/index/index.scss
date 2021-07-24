@@ -10,7 +10,6 @@ $blackVerySoft:#2E2E2E;
 $blackmate:#252525;
 $white:#E0E0E0;
 $aqua:#48FFBD;
-
 @mixin btnStyle{
     width: 100%;
     height: 100%;
@@ -21,31 +20,28 @@ $aqua:#48FFBD;
     color: $white;
     transition: 0.2s ease-in-out;
 }
-@keyframes opacity{
+@keyframes translate_opacity{
     0%{
-        opacity: 0%;
-        transform: translateY(-500px);
+        opacity: 0;
+        transform: translateY(-200px);
     }
     50%{
-        opacity: 100%;
-        transform: translateY(10px);
+        opacity: 80%;
+        transform: translateY(20px);
     }
     100%{
+        opacity: 100%;
         transform: translateY(0);
     }
 }
-@keyframes opacity-secondary{
-    0%{
-        opacity: 0%;
-    }
-    50%{
-        opacity: 100%;
-    }
-}
+
 body{
     box-sizing: content-box;
     font-family: 'Raleway', sans-serif;
     background: $blackmate;
+}
+body::-webkit-scrollbar{
+    width:0;
 }
 
 .container{
@@ -69,6 +65,7 @@ body{
                 height: 15%;
                 margin: auto;
                 a{
+                    animation: 5s opacity-secondary;
                     color: $aqua;
                     font-size:2.5em;
                 }
@@ -79,28 +76,26 @@ body{
                 height: 85%;
                 margin: auto;
                 .text{
+                    animation: 1s translate_opacity ;
                     .first-text{
                         font-size: 3em;
                         color: $white;
                         font-weight: lighter;
-                        animation: 3s opacity;
+                        animation: 1s translate_opacity ;
                     }
                     .second-text{
                         font-size: 7em;
                         color: $aqua;
-                        animation: 5s opacity-secondary;
                     }
                     .third-text{
                         font-size: 1em;
                         color: $white;
                         font-weight: lighter;
                         padding: 0 0 1em 0 ;
-                        animation: 6s opacity-secondary;
                     }
                     .btnr{
                         display: flex;
                         .btn{
-                            animation: 6s opacity-secondary;
                             display: flex;
                             text-decoration: none;
                             color: $aqua;
@@ -155,17 +150,19 @@ body{
             height: auto;
             align-items: center;
             justify-content: center;
-            
+            animation: 1s opacity ;
             .btn1{
-                
+                animation: 1s translate_opacity;
                 @include btnStyle();
                 background:$black;
             }
             .btn2{
+                animation: 1.5s translate_opacity;
                 @include btnStyle();
                 background:$blackSoft;
             }
             .btn3{
+                animation: 2s translate_opacity;
                 @include btnStyle();
                 background:$blackVerySoft;
             }
@@ -176,7 +173,6 @@ body{
         }
     }
 }
-
 @media screen and (max-width:882px){
     .container{
         display: grid;

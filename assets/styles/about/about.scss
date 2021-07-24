@@ -21,11 +21,28 @@ $aqua:#48FFBD;
     color: $white;
     transition: 0.2s ease-in-out;
 }
+@keyframes translate_opacity{
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    50%{
+        opacity: 80%;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
 
 body{
     box-sizing: content-box;
     font-family: 'Raleway', sans-serif;
     background: $blackmate;
+}
+body::-webkit-scrollbar{
+    width:0;
 }
 
 .container{
@@ -55,11 +72,13 @@ body{
             }
             .align-item-center{
                 .text{
+                    animation: 1s translate_opacity ;
                     .first-text{
                         font-size: 3em;
                         color: $white;
                         font-weight: bold;
                         padding: 0.2em 0;
+                        animation: 1s translate_opacity ;
                     }
                     .second-text{
                         font-size: 1em;
@@ -75,6 +94,7 @@ body{
                             display: grid;
                             grid-template-columns: repeat(4,1fr);
                             gap: 1em;
+                            padding: 0 0 2em 0;
                             .list-item{
                                 text-align: center;
                                 list-style: none;
@@ -83,6 +103,7 @@ body{
                                 font-weight: bold;
                                 background: $black;
                                 border-radius: 5px;
+                                animation: 1s translate_opacity ;
                                 i{
                                     color: $aqua;
                                     font-size: 5em;
@@ -110,16 +131,19 @@ body{
             height: auto;
             align-items: center;
             justify-content: center;
-            
+            animation: 1s opacity ;
             .btn1{
+                animation: 1s translate_opacity;
                 @include btnStyle();
                 background:$black;
             }
             .btn2{
+                animation: 1.5s translate_opacity;
                 @include btnStyle();
                 background:$blackSoft;
             }
             .btn3{
+                animation: 2s translate_opacity;
                 @include btnStyle();
                 background:$blackVerySoft;
             }
@@ -130,7 +154,6 @@ body{
         }
     }
 }
-
 @media screen and (max-width:882px){
     .container{
         display: grid;
@@ -180,7 +203,6 @@ body{
         }
     }
 }
-
 @media screen and (max-width:562px){
     .container{
         .main-content{
