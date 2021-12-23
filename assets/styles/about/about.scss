@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 *{
     padding: 0;
@@ -35,7 +34,10 @@ $aqua:#48FFBD;
         transform: translateY(0);
     }
 }
-
+@font-face{
+    font-family: raleway;
+    src: url('/assets/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+}
 body{
     box-sizing: content-box;
     font-family: 'Raleway', sans-serif;
@@ -76,7 +78,7 @@ body::-webkit-scrollbar{
                     .first-text{
                         font-size: 3em;
                         color: $white;
-                        font-weight: bold;
+                        font-weight: 400;
                         padding: 0.2em 0;
                         animation: 1s translate_opacity ;
                     }
@@ -89,13 +91,13 @@ body::-webkit-scrollbar{
                     .knowledges{
                         display: flex;
                         justify-content: space-between;
-                        justify-content: left;
                         .list{
                             display: grid;
                             grid-template-columns: repeat(4,1fr);
                             gap: 1em;
-                            padding: 0 0 2em 0;
+                            padding: 0 0 4em 0;
                             .list-item{
+                                box-shadow: 1px 1px 10px $black ;
                                 text-align: center;
                                 list-style: none;
                                 padding: 1em;
@@ -104,10 +106,11 @@ body::-webkit-scrollbar{
                                 background: $black;
                                 border-radius: 5px;
                                 animation: 1s translate_opacity ;
+
                                 i{
                                     color: $aqua;
                                     font-size: 5em;
-                                    padding: 0 0 0.1em 0;
+                                    padding: 0 0 0.5rem 0;
                                 }
                             }
 

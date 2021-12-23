@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;535;600&family=Raleway:wght@300;400;500&display=swap");
 @-webkit-keyframes translate_opacity {
   0% {
     opacity: 0;
@@ -21,7 +16,6 @@
             transform: translateY(0);
   }
 }
-
 @keyframes translate_opacity {
   0% {
     opacity: 0;
@@ -38,6 +32,11 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -118,6 +117,7 @@ body::-webkit-scrollbar {
 
 .container .main-content .main-info .align-item-center .text .second-text {
   font-size: 7em;
+  font-weight: 500;
   color: #48FFBD;
 }
 
@@ -161,7 +161,7 @@ body::-webkit-scrollbar {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 20%;
-  height: 15%;
+  height: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

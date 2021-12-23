@@ -1,15 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-}
 $black:#1C1C1C;
 $blackSoft:#363636;
 $blackVerySoft:#2E2E2E;
 $blackmate:#252525;
 $white:#E0E0E0;
 $aqua:#48FFBD;
+
 @mixin btnStyle{
     width: 100%;
     height: 100%;
@@ -35,6 +31,13 @@ $aqua:#48FFBD;
     }
 }
 
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;535;600&family=Raleway:wght@300;400;500&display=swap');
 body{
     box-sizing: content-box;
     font-family: 'Raleway', sans-serif;
@@ -64,6 +67,7 @@ body::-webkit-scrollbar{
                 display: flex;
                 height: 15%;
                 margin: auto;
+
                 a{
                     animation: 5s opacity-secondary;
                     color: $aqua;
@@ -85,6 +89,7 @@ body::-webkit-scrollbar{
                     }
                     .second-text{
                         font-size: 7em;
+                        font-weight: 500;
                         color: $aqua;
                     }
                     .third-text{
@@ -114,7 +119,7 @@ body::-webkit-scrollbar{
                         display: flex;
                         justify-content: space-between;
                         width: 20%;
-                        height: 15%;
+                        height: 100px;
                         align-items: center;
                         .link-item{
                             list-style: none;
@@ -133,6 +138,7 @@ body::-webkit-scrollbar{
                         }
                     }
                 }
+
             }
         }
     }

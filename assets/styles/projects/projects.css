@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;535;600&family=Raleway:wght@300;400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -98,7 +98,7 @@ body::-webkit-scrollbar {
 .container .main-content .main-info .align-item-center .text .first-text {
   font-size: 3em;
   color: #E0E0E0;
-  font-weight: bold;
+  font-weight: 400;
   padding: 0.2em 0;
   -webkit-animation: 1s translate_opacity;
           animation: 1s translate_opacity;
@@ -112,7 +112,7 @@ body::-webkit-scrollbar {
 }
 
 .container .main-content .main-info .align-item-center .text .card-container {
-  padding: 0 0 10em 0;
+  padding: 0 0 5em 0;
 }
 
 .container .main-content .main-info .align-item-center .text .card-container .card {
@@ -137,7 +137,7 @@ body::-webkit-scrollbar {
 .container .main-content .main-info .align-item-center .text .card-container .card .card-info .card-title {
   font-size: 3em;
   color: #48FFBD;
-  font-weight: l;
+  font-weight: 600;
   padding: 0.1em 0;
 }
 
@@ -149,15 +149,21 @@ body::-webkit-scrollbar {
 }
 
 .container .main-content .main-info .align-item-center .text .card-container .card .card-info .list {
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.5rem;
 }
 
 .container .main-content .main-info .align-item-center .text .card-container .card .card-info .list .list-item {
+  padding: 0.5rem 0.7rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.171);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.171);
   list-style: none;
-  padding: 0 0.5em 0 0;
   color: #48FFBD;
+  background-color: #252525;
 }
 
 .container .main-content .main-info .align-item-center .text .card-container .card .card-info .btnr {
@@ -368,7 +374,7 @@ body::-webkit-scrollbar {
   }
 }
 
-@media screen and (max-width: 517px) {
+@media screen and (max-width: 583px) {
   .container .main-content .main-info .align-item-center .text .card-container .card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
